@@ -1,0 +1,479 @@
+/*Dark Blue (intro and email sign up background): hsl(217, 28%, 15%)
+- Dark Blue (main background): hsl(218, 28%, 13%)
+- Dark Blue (footer background): hsl(216, 53%, 9%)
+- Dark Blue (testimonials background): hsl(219, 30%, 18%)*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap');
+*{
+    margin:0; padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    background: hsl(217, 28%, 15%);
+    color: #cecece;
+    font-size: 14px;
+}
+main{
+    background-color: hsl(218, 28%, 13%);
+}
+.container{
+    padding:5rem 3.5rem;
+}
+.heading{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    color: white;
+}
+/*--------------------header---------------------------*/
+header{
+    position: fixed;
+    z-index:100;
+    width: 100%;
+}
+header.scrolled{
+    background: rgba(0,0,0,60%);
+    transition: .3s;
+}
+header .container{
+    padding:2rem 3.5rem;
+}
+nav{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+nav li{
+    list-style: none;
+    display:inline;
+    margin-right: 4rem;
+}
+nav li a{
+    text-decoration: none;
+    color:white;
+     font-size: 16px;
+}
+@media (max-width:800px){
+    nav li{margin-right: 2rem;}
+}
+@media (max-width:600px){
+    nav li{margin-right: 1rem;}
+    .logo{
+        width:140px;
+    }
+}
+@media (max-width:500px){
+    header .container{
+        padding: 2rem 5%;
+    }
+    nav li{margin-right: .5rem;}
+    nav li a{font-size: 14px;}
+    .logo{
+        width: 110px;
+    }
+}
+@media (max-width:350px){
+    nav li a{font-size: 12px;}
+    .logo{font-size: 100px;}
+}
+/*--------------------general--------------------------*/
+/************************intro-section******************/
+.intro-section{
+    background-color: hsl(217, 28%, 15%);
+    position: relative;
+}
+.intro-contain{
+    position: relative;
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+    padding-bottom: 2rem;
+    z-index: 2;
+}
+.intro-contain img{
+    width: 100%;
+    height: auto;
+}
+.intro-contain .heading{
+    font-size: 36px;
+    line-height: 3rem;
+    letter-spacing: 2px;
+}
+
+.intro-section img{
+    position: relative;
+    width: 100%;
+}
+.intro-section a{
+    position: relative;
+    text-decoration: none;
+    color: white;
+    padding:11px 74px;
+    border-radius: 30px;
+    background-color: hsl(198, 60%, 50%);
+}
+.intro-section a:hover{
+    background-color: cyan;
+}
+.intro-section .link{
+    text-align: center;
+}
+svg{
+    position:absolute;
+    bottom: 0;
+}
+@media (max-width:1220px){
+    .intro-contain{width: 80%;}
+}
+@media (max-width:900px){
+    .intro-contain{width: 90%;}
+    .intro-section .heading{
+        font-size: 30px;
+    }
+}
+@media (max-width:680px){
+    .intro-contain{width: 100%;}
+    .intro-section .heading{
+        font-size: 25px;
+    }
+}
+
+@media (max-width:500px){
+    .container{
+        padding: 5rem 5%;
+    }
+}
+@media (max-width:400px){
+    .intro-section .heading{
+        font-size: 21px;
+    }
+}
+/**********************************services-section******************/
+.services-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.services{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%;
+    row-gap: 5rem;
+}
+.service-card{
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.service-card div{
+    width: 70%;
+    text-align: center;
+}
+.service-card img{
+    padding-bottom: 1rem;
+}
+.service-card .heading{
+    padding-bottom: .5rem;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+}
+@media (max-width:1330px){
+    .services{
+        width: 100%;
+    }
+}
+@media (max-width:1000px){
+    .services{
+        grid-template-columns: 1fr;
+    }
+    .service-card div{
+        width: 100%;
+    }
+}
+/*********************************************productive-section**************************************/
+.productive-section{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.productive-section .heading{
+    width: 80%;
+    font-size: 36px;
+    line-height: 3rem;
+    padding-bottom: 1.5rem;
+}
+.productive-text{
+    width: 36rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+}
+.prod-img{
+    width: 41em;
+}
+.prod-img img{
+    width: 100%;
+}
+.productive-text div > p{
+    line-height: 1.5rem;
+    letter-spacing: 1px;
+    padding-bottom: 1.5rem;
+    font-size: 15px;
+}
+.productive-link {
+    color:hsl(198, 60%, 50%);
+}
+.productive-link::after{
+    content: "";
+    height:2px;
+    width: 100%;
+    background-color: aqua;
+    position: relative;
+}
+.productive-link a{
+    text-decoration: none;
+    color:hsl(198, 60%, 50%);
+}
+.productive-link:hover, .productive-link a:hover{
+    color:cyan;
+    cursor: pointer;
+}
+@media (max-width:1000px){
+    .productive-section{
+        flex-direction: column;
+    }
+    .prod-img, .productive-text{
+        width:inherit;
+        padding-left: 0;
+    }
+    .prod-img{
+        margin-bottom: 15px;
+    }
+}
+@media (max-width:900px){
+    .productive-text .heading{
+        width: 100%;
+        font-size: 30px;
+    }
+}
+@media (max-width:700px){
+    .productive-text .heading{
+        font-size: 25px;
+    }
+}
+@media (max-width:400px){
+    .productive-text .heading{
+        font-size: 19px;
+    }
+}
+/*******************************************testimonials-section**************************************/
+.testimonials-section{
+    padding-bottom: 15rem;
+}
+.testimonials-contain{
+    position: relative;
+}
+.testimonials{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 10;
+    font-family: 'Open Sans', sans-serif;
+}
+.bg-quotes{
+    position:absolute;
+    top:-30px; left:15px;
+}
+.testimonials-card{
+    padding: 25px;
+    width: 30%;
+    background-color: hsl(219, 30%, 18%);
+    border-radius: 5px;
+    line-height: 1.2rem;
+}
+.profile{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+.profile img{
+    border-radius: 100%;
+    width: 35px;
+    margin-right: 20px;
+}
+.testinomials-name{font-size: 10px;}
+
+@media (max-width:1000px){
+    .testimonials{
+        flex-direction: column;
+    }
+    .testimonials-card{
+        width: 70%;
+        margin-bottom: 20px;
+    }
+    .bg-quotes{
+        left:10%;
+    }
+}
+@media (max-width:700px){
+    .testimonials-card{
+        width: 90%;
+    }
+    .bg-quotes{
+        left:24px;
+    }
+}
+/******************************************sign up section*********************************/
+.signUp-section{
+    display: flex; 
+    justify-content: center; align-items: center;
+    text-align: center;
+    width: 100%;
+    position:relative;
+}
+.sign{
+    width: 60%;
+    background-color: hsl(217, 28%, 15%);
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top:-9rem;
+    padding:27px 32px;
+    border-radius: 15px;
+}
+.sign .heading{
+    font-size: 2rem;
+}
+.sign p{
+    padding-bottom: 1.5rem;
+}
+input[type=email]{
+    border-radius: 30px;
+    width: 50%; height: 30px;
+    margin-right:10px;
+    border:none;
+}
+.sign input[type=submit]{
+    background-color: hsl(198, 60%, 50%);
+    color:white;
+    border:none;
+    border-radius: 30px;
+    padding: 6px 25px;
+}
+.sign input[type=submit]:hover{
+    background-color: cyan;
+    cursor: pointer;
+}
+.form{
+    width: 100%;
+}
+form{
+    display:flex;
+    justify-content: center;
+}
+@media (max-width:1000px){
+    .sign{
+        width: 80%;
+    }
+}
+@media (max-width:800px){
+    .sign{
+        width: 90%;
+    }
+}
+@media (max-width:500px){
+    .sign{width: 100%;}
+    form{flex-direction: column;}
+    input[type=email]{width: 100%;}
+    .sign .heading{font-size: 1.3rem;}
+    form input{height:40px !important;}
+    input[type=email]{
+        margin-bottom:15px;
+    }
+}
+/*---------------------footer---------------------------*/
+footer{
+    background: hsl(216, 53%, 9%);
+    padding: 3rem 1rem;
+    position: relative;
+}
+footer i{color: white;}
+.footer-content .row{
+    display: flex;
+    flex-direction: row;
+}
+footer a{
+    text-decoration: none;
+}
+.footer{
+    display:flex;
+    flex-direction: column;
+    margin-top:7rem;
+    padding: 0 5rem;
+}
+.footer-content{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.footer-nav a{
+    line-height: 2rem;
+    color:#cecece;
+}
+.footer-content > div{
+    display:flex;
+    flex-direction: column;
+}
+.address{
+    width: 20rem;
+}
+.tel i, .mail i, .address i{
+    margin-right: 15px;
+    align-items: center;
+}
+
+.social-links div{
+    width: 30px; height: 30px;
+    border:1px solid white;
+    border-radius: 100%;
+    text-align: center;
+    padding: 5px;
+    margin-right: 5px;
+}
+.social-links div:hover{
+    border:1px solid cyan;
+    cursor:pointer;
+}
+.social-links div:hover i{
+    color: cyan;
+}
+
+
+@media (max-width:1000px){
+    .footer-content > div{
+        flex: 0 0 300px;
+        margin-bottom: 2rem;
+    }
+}
+@media (max-width:800px){
+    .footer{
+        padding: 0 2rem;
+    }
+}
+@media (max-width:500px){
+    .footer{
+        margin-top: 14rem;
+        padding: 0;
+    }
+}
